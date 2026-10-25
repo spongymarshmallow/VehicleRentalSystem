@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS customers (
     PRIMARY KEY (customer_id),
     UNIQUE KEY phone (phone),
     UNIQUE KEY license_no (license_no)
-    );
+);
 
 CREATE TABLE IF NOT EXISTS vehicles (
     vehicle_id INT NOT NULL AUTO_INCREMENT,
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS vehicles (
     PRIMARY KEY (vehicle_id),
     UNIQUE KEY reg_no (reg_no),
     CHECK (daily_rate > 0)
-    );
+);
 
 CREATE TABLE IF NOT EXISTS rentals (
     rental_id    INT NOT NULL AUTO_INCREMENT,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS rentals (
     KEY vehicle_id (vehicle_id),
     CONSTRAINT rentals_ibfk_1 FOREIGN KEY (customer_id) REFERENCES customers (customer_id),
     CONSTRAINT rentals_ibfk_2 FOREIGN KEY (vehicle_id)  REFERENCES vehicles (vehicle_id)
-    );
+);
 
 -- Sample data
 INSERT INTO customers (name, phone, license_no)
