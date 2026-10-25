@@ -50,11 +50,7 @@ The full schema and sample data are in `schema.sql`.
    - Windows (PowerShell): `$env:DB_PASSWORD="your_password"`
    - Linux/macOS: `export DB_PASSWORD=your_password`
 4. **Check the connection settings** in `DBConnection.java` (default: `127.0.0.1:3306`, user `root`, database `vehicle_rental`).
-5. **Build and run:**
-   ```
-   mvn compile
-   mvn exec:java -Dexec.mainClass="com.rental.<MainClass>"
-   ```
+5. **Build and run:** Open the project in IntelliJ IDEA, add `DB_PASSWORD` to the run configuration, and run `Main`.
 
 ## Author
 
